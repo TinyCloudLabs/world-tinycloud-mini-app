@@ -14,9 +14,9 @@ const walletAuthInput = (nonce: string): WalletAuthInput => {
 };
 
 type User = {
-    walletAddress: string;
-    username: string | null;
-    profilePictureUrl: string | null;
+    walletAddress?: string;
+    username?: string;
+    profilePictureUrl?: string;
 };
 
 export const WalletAuth = () => {
@@ -73,7 +73,7 @@ export const WalletAuth = () => {
                             />
                         )}
                         <span className="font-medium">
-                            {user?.username || user?.walletAddress.slice(0, 6) + '...' + user?.walletAddress.slice(-4)}
+                            {user?.username || (user?.walletAddress ? user.walletAddress.slice(0, 6) + '...' + user.walletAddress.slice(-4) : 'No Address')}
                         </span>
                     </div>
                     <Button

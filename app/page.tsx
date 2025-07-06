@@ -1,10 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { MiniKit } from "@worldcoin/minikit-js";
+
+export const dynamic = 'force-dynamic';
 import { VerifyBlock } from "@/components/Verify";
 import { PayBlock } from "@/components/Pay";
 import { WalletAuth } from "@/components/WalletAuth";
 import { Login } from "@/components/Login";
+import { TinyCloudAuth } from "@/components/TinyCloudAuth";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,6 +52,11 @@ export default function Home() {
         <section className="bg-white rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
           <h2 className="text-xl font-semibold mb-4 text-gray-800">Wallet Auth</h2>
           <WalletAuth />
+        </section>
+
+        <section className="bg-white rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
+          <h2 className="text-xl font-semibold mb-4 text-gray-800">TinyCloud Auth</h2>
+          <TinyCloudAuth />
         </section>
 
         <section className="bg-white rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
