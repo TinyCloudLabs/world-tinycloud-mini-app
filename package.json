@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tinycloudlabs/web-sdk": "^0.2.0",
     "@worldcoin/mini-apps-ui-kit-react": "^0.0.6",
     "@worldcoin/minikit-js": "1.9.6",
     "eruda": "^3.4.3",
